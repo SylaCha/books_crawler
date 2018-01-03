@@ -31,9 +31,9 @@ class BooksSpider(Spider):
         description = response.xpath('//*[@id="product_description"]/following-sibling::p/text()').extract_first()
 
         yield{
-            'title': title
-            'price': price
-            'image_url': image_url
-            'rating': rating
+            'title': title,
+            'price': price,
+            'image_url': image_url,
+            'rating': rating,
             'description': description
         }
