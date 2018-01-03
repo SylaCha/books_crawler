@@ -5,7 +5,7 @@ from scrapy.http import Request
 class BooksSpider(Spider):
     name = 'books'
     allowed_domains = ['books.toscrape.com/']
-    start_urls = []'http://books.toscrape.com/']
+    start_urls = ['http://books.toscrape.com/']
 
     def parse_page(self, response):
         books = response.xpath('//h3/a/@href').extract()
